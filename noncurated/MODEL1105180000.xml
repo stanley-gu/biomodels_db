@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" level="2" metaid="_999638" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="4">
+  <model id="Smallbone2009_FBAmodel_GeometricPerspective" name="Smallbone2009_FBAmodel_GeometricPerspective" metaid="meta_toy_model">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>This model is from the article:      <br/>
+                <strong>Flux balance analysis: a geometric perspective.</strong>
+                <br/>
+          Smallbone K, Simeonidis E.      <em>J Theor Biol.</em>
+          2009 May 21;258(2):315-5      <a href="http://www.ncbi.nlm.nih.gov/pubmed/19490860">19490860</a>
+          ,      <br/>
+                <strong>Abstract:</strong>
+                <br/>
+          Advances in the field of bioinformatics have led to reconstruction of genome-scale networks for a number of key organisms. The application of physicochemical constraints to these stoichiometric networks allows researchers, through methods such as flux balance analysis, to highlight key sets of reactions necessary to achieve particular objectives. The key benefits of constraint-based analysis lie in the minimal knowledge required to infer systemic properties. However, network degeneracy leads to a large number of flux distributions that satisfy any objective; moreover, these distributions may be dominated by biologically irrelevant internal cycles. By examining the geometry underlying the problem, we define two methods for finding a unique solution within the space of all possible flux distributions; such a solution contains no internal cycles, and is representative of the space as a whole. The first method draws on typical geometric knowledge, but cannot be applied to large networks because of the high computational complexity of the problem. Thus a second method, an iteration of linear programs which scales easily to the genome scale, is defined. The algorithm is run on four recent genome-scale models, and unique flux solutions are found. The algorithm set out here will allow researchers in flux balance analysis to exchange typical solutions to their models in a reproducible format. Moreover, having found a single solution, statistical analyses such as correlations may be performed.      </p>
+            <p>This model originates from BioModels Database: A Database of Annotated Published Models (http://www.ebi.ac.uk/biomodels/). It is copyright (c) 2005-2011 The BioModels.net Team.      <br/>
+          To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. Please refer to      <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a>
+          for more information.      </p>
+            <p>In summary, you are entitled to use this encoded model in absolutely any manner you deem suitable, verbatim, or with modification, alone or embedded it in a larger context, redistribute it, commercially or not, in a restricted way or not.
+          .      <br/>
+                <br/>
+          To cite BioModels Database, please use:      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20587024" target="_blank">Li C, Donizelli M, Rodriguez N, Dharuri H, Endler L, Chelliah V, Li L, He E, Henry A, Stefan MI, Snoep JL, Hucka M, Le Novère N, Laibe C (2010) BioModels Database: An enhanced, curated and annotated resource for published quantitative kinetic models. BMC Syst Biol., 4:92.</a>
+                </p>
+            </body>
+      
+    </notes>
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+        <rdf:Description rdf:about="#meta_toy_model">
+          <dc:creator>
+            <rdf:Bag>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Smallbone</vCard:Family>
+                  <vCard:Given>Kieran</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>kieran.smallbone@manchester.ac.uk</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>University of Manchester</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Smallbone</vCard:Family>
+                  <vCard:Given>Kieran</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>kieran.smallbone@manchester.ac.uk</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>University of Manchester</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Smallbone</vCard:Family>
+                  <vCard:Given>Kieran</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>kieran.smallbone@manchester.ac.uk</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>University of Manchester</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+            </rdf:Bag>
+          </dc:creator>
+          <dcterms:created rdf:parseType="Resource">
+            <dcterms:W3CDTF>2008-10-20T00:00:00Z</dcterms:W3CDTF>
+          </dcterms:created>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-02-03T12:18:52Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-02-03T12:18:52Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-02-03T12:18:52Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-02-03T12:18:52Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1105180000"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/pubmed/19490860"/>
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1105180000"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/pubmed/19490860"/>
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:biomodels.db:MODEL1105180000"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:biomodels.db:MODEL1105180000"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:pubmed:19490860"/>
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+      <listOfUnitDefinitions>
+      <unitDefinition id="substance" metaid="_999650">
+        <listOfUnits>
+          <unit metaid="_999662" kind="dimensionless"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="time" metaid="_999674">
+        <listOfUnits>
+          <unit metaid="_999686" kind="dimensionless"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="volume" metaid="_999698">
+        <listOfUnits>
+          <unit metaid="_999710" kind="dimensionless"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="cell" name="cell" metaid="meta_cell" sboTerm="SBO:0000290" size="1">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_cell">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0005622"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="A" name="A" metaid="_999722" sboTerm="SBO:0000247" compartment="cell"/>
+      <species id="B" name="B" metaid="_999734" sboTerm="SBO:0000247" compartment="cell"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="v1" name="v1" metaid="_999746" sboTerm="SBO:0000185">
+        <listOfProducts>
+          <speciesReference species="A" metaid="_999758"/>
+        </listOfProducts>
+        <kineticLaw metaid="_999770">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX_VALUE </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_999782" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_999794" value="1" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_999807" value="0" units="dimensionless"/>
+            <parameter id="FLUX_VALUE" metaid="_999819" value="1" units="dimensionless"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v2" name="v2" metaid="_999831" sboTerm="SBO:0000176">
+        <listOfReactants>
+          <speciesReference species="A" metaid="_999843"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="B" metaid="_999855"/>
+        </listOfProducts>
+        <kineticLaw metaid="_999867">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX_VALUE </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_999879" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_999891" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_999903" value="0" units="dimensionless"/>
+            <parameter id="FLUX_VALUE" metaid="_999915" value="0.33333333333333" units="dimensionless"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v3" name="v3" metaid="_999927" sboTerm="SBO:0000176">
+        <listOfReactants>
+          <speciesReference species="A" metaid="_999940"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="B" metaid="_999952"/>
+        </listOfProducts>
+        <kineticLaw metaid="_999964">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX_VALUE </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_999976" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_999988" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_000000" value="0" units="dimensionless"/>
+            <parameter id="FLUX_VALUE" metaid="_000012" value="0.33333333333333" units="dimensionless"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v4" name="v4" metaid="_000024" sboTerm="SBO:0000176">
+        <listOfReactants>
+          <speciesReference species="A" metaid="_000036"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="B" metaid="_000048"/>
+        </listOfProducts>
+        <kineticLaw metaid="_000060">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX_VALUE </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_000072" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_000084" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_000096" value="0" units="dimensionless"/>
+            <parameter id="FLUX_VALUE" metaid="_000109" value="0.33333333333333" units="dimensionless"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v5" name="v5" metaid="_000121" sboTerm="SBO:0000185">
+        <listOfReactants>
+          <speciesReference species="B" metaid="_000133"/>
+        </listOfReactants>
+        <kineticLaw metaid="_000145">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX_VALUE </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_000157" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_000169" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_000182" value="1" units="dimensionless"/>
+            <parameter id="FLUX_VALUE" metaid="_000194" value="1" units="dimensionless"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

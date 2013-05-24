@@ -1,0 +1,569 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2" level="2" metaid="metaid_0000001" version="1">
+  <model id="Goldbeter_Calcium_Oscillation_based_onCICR_AND_two_pool_model" name="Borghans1997_CaOscillation_model3" metaid="metaid_0000002">
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+        <rdf:Description rdf:about="#metaid_0000002">
+          <dc:creator>
+            <rdf:Bag>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Le Novère</vCard:Family>
+                  <vCard:Given>Nicolas</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>lenov@ebi.ac.uk</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>EMBL-EBI</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Dharuri</vCard:Family>
+                  <vCard:Given>Harish</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>Harish_Dharuri@kgi.edu</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>Keck Graduate Institute</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+            </rdf:Bag>
+          </dc:creator>
+          <dcterms:created rdf:parseType="Resource">
+            <dcterms:W3CDTF>2005-07-08T13:06:45Z</dcterms:W3CDTF>
+          </dcterms:created>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-05-15T21:49:27Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL6623009547"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/biomodels.db/BIOMD0000000045"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/pubmed/17029867"/>
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+          <bqbiol:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/kegg.pathway/rno04020"/>
+            </rdf:Bag>
+          </bqbiol:is>
+          <bqbiol:occursIn>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/taxonomy/10114"/>
+            </rdf:Bag>
+          </bqbiol:occursIn>
+          <bqbiol:isVersionOf>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0019722"/>
+              <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0048016"/>
+            </rdf:Bag>
+          </bqbiol:isVersionOf>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+      <listOfUnitDefinitions>
+      <unitDefinition id="substance" name="micromole (default)" metaid="metaid_0000003">
+        <listOfUnits>
+          <unit scale="-6" metaid="_273165" offset="0" multiplier="1" kind="mole"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="time" name="minute (default)" metaid="metaid_0000004">
+        <listOfUnits>
+          <unit metaid="_273177" offset="0" multiplier="60" kind="second"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="extracellular" metaid="metaid_0000007" size="1">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000007">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0005615"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+      <compartment id="cytosol" metaid="metaid_0000006" outside="extracellular" size="1">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000006">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0005829"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+      <compartment id="intravesicular1" metaid="metaid_0000005" outside="cytosol" size="1">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000005">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0005790"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+      <compartment id="intravesicular2" metaid="metaid_0000021" outside="cytosol" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="EC" initialConcentration="0" metaid="metaid_0000008" compartment="extracellular">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000008">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:29108"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00076"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="Z" initialConcentration="0" metaid="metaid_0000009" compartment="cytosol">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000009">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:29108"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00076"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="Y" initialConcentration="0" metaid="metaid_0000010" compartment="intravesicular2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000010">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:29108"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00076"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="X" initialConcentration="0.5" metaid="metaid_0000011" compartment="intravesicular1">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000011">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:29108"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00076"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="beta" metaid="metaid_0000012" value="1"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="vin" metaid="metaid_0000013" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000013">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0007204"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006816"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="EC" metaid="_273190"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Z" metaid="_273202"/>
+        </listOfProducts>
+        <kineticLaw metaid="_273214">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <apply>
+                <plus/>
+                <ci> v0 </ci>
+                <apply>
+                  <times/>
+                  <ci> v1 </ci>
+                  <ci> beta </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="v0" metaid="_273226" value="0.015"/>
+            <parameter id="v1" metaid="_273238" value="0.012"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v2i" metaid="metaid_0000014" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000014">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006816"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0051481"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="Z" metaid="_273250"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Y" metaid="_273262"/>
+        </listOfProducts>
+        <kineticLaw metaid="_273274">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> intravesicular2 </ci>
+                <ci> Vm2i </ci>
+                <apply>
+                  <power/>
+                  <ci> Z </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <power/>
+                  <ci> K2i </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <ci> Z </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vm2i" metaid="_273286" value="3.1"/>
+            <parameter id="K2i" metaid="_273298" value="0.005"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v3i" metaid="metaid_0000015" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000015">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0007204"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006816"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0005219"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="Y" metaid="_273310"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Z" metaid="_273322"/>
+        </listOfProducts>
+        <kineticLaw metaid="_273334">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> cytosol </ci>
+                <ci> Vm3i </ci>
+                <apply>
+                  <power/>
+                  <ci> Y </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <ci> Z </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> K3y </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> Y </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> K3z </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> Z </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vm3i" metaid="_273346" value="25"/>
+            <parameter id="K3y" metaid="_273358" value="0.065"/>
+            <parameter id="K3z" metaid="_273371" value="0.022"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v4" metaid="metaid_0000016" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000016">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0007204"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006816"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="Y" metaid="_273383"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Z" metaid="_273395"/>
+        </listOfProducts>
+        <kineticLaw metaid="_273408">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <ci> Kf </ci>
+              <ci> Y </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Kf" metaid="_273421" value="0.5"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v5" metaid="metaid_0000017" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000017">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006816"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0051481"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="Z" metaid="_273433"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="EC" metaid="_273445"/>
+        </listOfProducts>
+        <kineticLaw metaid="_273457">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> extracellular </ci>
+              <ci> K </ci>
+              <ci> Z </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="K" metaid="_273470" value="1"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v6" metaid="metaid_0000018" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000018">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0007204"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006816"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="X" metaid="_273482"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Z" metaid="_273494"/>
+        </listOfProducts>
+        <kineticLaw metaid="_273506">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <ci> Kf </ci>
+              <ci> X </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Kf" metaid="_273518" value="0.5"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v2s" metaid="metaid_0000019" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000019">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006816"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0051481"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="Z" metaid="_273530"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="X" metaid="_273542"/>
+        </listOfProducts>
+        <kineticLaw metaid="_273554">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> intravesicular1 </ci>
+                <ci> Vm2s </ci>
+                <apply>
+                  <power/>
+                  <ci> Z </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <power/>
+                  <ci> K2s </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <ci> Z </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vm2s" metaid="_273566" value="1.5"/>
+            <parameter id="K2s" metaid="_273578" value="0.0265"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v3s" metaid="metaid_0000020" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000020">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006816"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0051482"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="X" metaid="_273591"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Z" metaid="_273603"/>
+        </listOfProducts>
+        <kineticLaw metaid="_273615">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> cytosol </ci>
+                <ci> beta </ci>
+                <ci> Vm3s </ci>
+                <apply>
+                  <power/>
+                  <ci> X </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <power/>
+                  <ci> K3s </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <ci> X </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vm3s" metaid="_273627" value="0.169"/>
+            <parameter id="K3s" metaid="_273639" value="0.1"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

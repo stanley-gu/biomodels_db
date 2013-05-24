@@ -1,0 +1,799 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version3" level="2" metaid="metaid_0000001" version="3">
+  <model id="vilarOscillator" name="Vilar2002_Oscillator" metaid="metaid_0000002">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <h1>      <h1>Minimal Model for Circadian Oscillations</h1>
+                </h1>
+            <table cellspacing="0" cellpadding="2" border="0">      <thead>        <tr>          <th valign="middle" bgcolor="#eeeeee" align="left">Citation</th>
+                        </tr>
+                    </thead>
+                <tbody>        <tr>          <td>Vilar JMG, Kueh HY, Barkai N, Leibler S,
+							 (2002)
+							. Mechanisms of noise resistance in genetic oscillators,
+							  PNAS, 99(9):5988-5992.            <a href="http://www.pnas.org/%20%20%20%20%20%20%20%20cgi/content/abstract/99/9/5988">http://www.pnas.org/cgi/content/abstract/
+							99/9/5988</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            <table cellspacing="0" cellpadding="2" border="0">      <thead>        <tr>          <th valign="middle" bgcolor="#eeeeee" align="left">Description</th>
+                        </tr>
+                    </thead>
+                <tbody>        <tr>          <td>A minimal model of genomically based oscillation,
+							 based on two mutually interacting genes,
+							 an activator and a repressor. Postive feedback is provided by the activator protein,
+							 which binds to the promotors of both the activator and the repressor genes. Negative feedback is provided by the repressor protein which binds to the activator protein.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <table cellspacing="0" cellpadding="2" border="0">      <thead>        <tr>          <th valign="middle" bgcolor="#eeeeee" align="left">Rate constant      </th>
+                        <th valign="middle" bgcolor="#eeeeee" align="left">Reaction</th>
+                        </tr>
+                    </thead>
+                <tbody>        <tr>          <td>alphaA = 50</td>
+                        <td>DA -> DA + MA</td>
+                        </tr>
+                    <tr>          <td>alphaAp = 500</td>
+                        <td>DAp -> DAp + MA</td>
+                        </tr>
+                    <tr>          <td>alphaR = 0.01</td>
+                        <td>DR -> DR + MR</td>
+                        </tr>
+                    <tr>          <td>alphaRp = 50</td>
+                        <td>DRp -> DRp + MR</td>
+                        </tr>
+                    <tr>          <td>betaA = 50</td>
+                        <td>MA -> A + MA</td>
+                        </tr>
+                    <tr>          <td>betaR = 5</td>
+                        <td>MR -> MR + R</td>
+                        </tr>
+                    <tr>          <td>gammaA = 1</td>
+                        <td>A + DA -> DAp</td>
+                        </tr>
+                    <tr>          <td>gammaC = 2</td>
+                        <td>A + R -> C</td>
+                        </tr>
+                    <tr>          <td>gammaR = 1</td>
+                        <td>A + DR -> DRp</td>
+                        </tr>
+                    <tr>          <td>deltaA = 1</td>
+                        <td>A -> EmptySet</td>
+                        </tr>
+                    <tr>          <td>deltaA = 1</td>
+                        <td>C -> R</td>
+                        </tr>
+                    <tr>          <td>deltaMA = 10</td>
+                        <td>MA -> EmptySet</td>
+                        </tr>
+                    <tr>          <td>deltaMR = 0.5</td>
+                        <td>MR -> EmptySet</td>
+                        </tr>
+                    <tr>          <td>deltaR = 0.2</td>
+                        <td>R -> EmptySet</td>
+                        </tr>
+                    <tr>          <td>thetaA = 50</td>
+                        <td>DAp -> A + DA</td>
+                        </tr>
+                    <tr>          <td>thetaR = 100</td>
+                        <td>DRp -> A + DR</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <table cellspacing="0" cellpadding="2" border="0">      <thead>        <tr>          <th valign="middle" bgcolor="#eeeeee" align="left">Variable</th>
+                        <th valign="middle" bgcolor="#eeeeee" align="left">IC  </th>
+                        <th valign="middle" bgcolor="#eeeeee" align="left">ODE</th>
+                        </tr>
+                    </thead>
+                <tbody>        <tr>          <td>A</td>
+                        <td>0</td>
+                        <td>A'[t] == -(deltaA*A[t]) - gammaA*A[t]*DA[t] + thetaA*DAp[
+							t] - gammaR*A[t]*DR[t] + thetaR*DRp[t] + betaA*MA[t] -
+							 gammaC*A[t]*R[t]</td>
+                        </tr>
+                    <tr>          <td>C</td>
+                        <td>0</td>
+                        <td>C'[t] == -(deltaA*C[t]) + gammaC*A[t]*R[t]</td>
+                        </tr>
+                    <tr>          <td>DA</td>
+                        <td>1</td>
+                        <td>DA'[t] == -(gammaA*A[t]*DA[t]) + thetaA*DAp[t]</td>
+                        </tr>
+                    <tr>          <td>DAp</td>
+                        <td>0</td>
+                        <td>DAp'[t] == gammaA*A[t]*DA[t] - thetaA*DAp[t]</td>
+                        </tr>
+                    <tr>          <td>DR</td>
+                        <td>1</td>
+                        <td>DR'[t] == -(gammaR*A[t]*DR[t]) + thetaR*DRp[t]</td>
+                        </tr>
+                    <tr>          <td>DRp</td>
+                        <td>0</td>
+                        <td>DRp'[t] == gammaR*A[t]*DR[t] - thetaR*DRp[t]</td>
+                        </tr>
+                    <tr>          <td>MA</td>
+                        <td>0</td>
+                        <td>MA'[t] == alphaA*DA[t] + alphaAp*DAp[t] - deltaMA*MA[t]</td>
+                        </tr>
+                    <tr>          <td>MR</td>
+                        <td>0</td>
+                        <td>MR'[t] == alphaR*DR[t] + alphaRp*DRp[t] - deltaMR*MR[t]</td>
+                        </tr>
+                    <tr>          <td>R</td>
+                        <td>0</td>
+                        <td>R'[t] == deltaA*C[t] + betaR*MR[t] - deltaR*R[t] -
+							 gammaC*A[t]*R[t]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <p>Generated by Cellerator Version 1.0 update 2.1127 using Mathematica 4.2 for 
+				Mac OS X (June 4, 2002), November 27, 2002 12:17:46, using (PowerMac,PowerPC,
+				Mac OS X,MacOSX,Darwin)</p>
+            <p>author=B.E.Shapiro</p>
+            <p>This model originates from BioModels Database: A Database of Annotated Published Models. It is copyright (c) 2005-2009 The BioModels Team.      <br/>
+          For more information see the      <a href="http://www.ebi.ac.uk/biomodels/legal.html" target="_blank">terms of use</a>
+          .      <br/>
+          To cite BioModels Database, please use      <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pubmed&amp;pubmedid=16381960" target="_blank">Le Novère N., Bornstein B., Broicher A., Courtot M., Donizelli M., Dharuri H., Li L., Sauro H., Schilstra M., Shapiro B., Snoep J.L., Hucka M. (2006) BioModels Database: A Free, Centralized Database of Curated, Published, Quantitative Kinetic Models of Biochemical and Cellular Systems Nucleic Acids Res., 34: D689-D691.</a>
+                </p>
+            </body>
+      
+    </notes>
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+        <rdf:Description rdf:about="#metaid_0000002">
+          <dc:creator>
+            <rdf:Bag>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Le Novère</vCard:Family>
+                  <vCard:Given>Nicolas</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>lenov@ebi.ac.uk</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>EMBL-EBI</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Shapiro</vCard:Family>
+                  <vCard:Given>Bruce</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>bshapiro@caltech.edu</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>Jet Propulsion Laboratory</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+            </rdf:Bag>
+          </dc:creator>
+          <dcterms:created rdf:parseType="Resource">
+            <dcterms:W3CDTF>2005-06-30T10:20:37Z</dcterms:W3CDTF>
+          </dcterms:created>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-04-20T18:19:03Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL6619651140"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/biomodels.db/BIOMD0000000035"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/pubmed/11972055"/>
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+          <bqbiol:isVersionOf>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0042752"/>
+            </rdf:Bag>
+          </bqbiol:isVersionOf>
+          <bqbiol:isVersionOf>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/taxonomy/131567"/>
+            </rdf:Bag>
+          </bqbiol:isVersionOf>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+      <listOfUnitDefinitions>
+      <unitDefinition id="time" name="hour" metaid="metaid_0000030">
+        <listOfUnits>
+          <unit metaid="_153479" multiplier="3600" kind="second"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="deterministicOscillator" metaid="metaid_0000003" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="EmptySet" initialAmount="0" hasOnlySubstanceUnits="true" metaid="metaid_0000004" boundaryCondition="true" compartment="deterministicOscillator"/>
+      <species id="A" initialAmount="0" hasOnlySubstanceUnits="true" metaid="metaid_0000005" compartment="deterministicOscillator">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000005">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:36080"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="C" initialAmount="0" hasOnlySubstanceUnits="true" metaid="metaid_0000006" compartment="deterministicOscillator">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000006">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:36080"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="DA" initialAmount="1" hasOnlySubstanceUnits="true" metaid="metaid_0000007" compartment="deterministicOscillator"/>
+      <species id="DAp" initialAmount="0" hasOnlySubstanceUnits="true" metaid="metaid_0000008" compartment="deterministicOscillator"/>
+      <species id="DR" initialAmount="1" hasOnlySubstanceUnits="true" metaid="metaid_0000009" compartment="deterministicOscillator"/>
+      <species id="DRp" initialAmount="0" hasOnlySubstanceUnits="true" metaid="metaid_0000010" compartment="deterministicOscillator"/>
+      <species id="MA" initialAmount="0" hasOnlySubstanceUnits="true" metaid="metaid_0000011" compartment="deterministicOscillator">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000011">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:33699"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="MR" initialAmount="0" hasOnlySubstanceUnits="true" metaid="metaid_0000012" compartment="deterministicOscillator">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000012">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:33699"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="R" initialAmount="0" hasOnlySubstanceUnits="true" metaid="metaid_0000013" compartment="deterministicOscillator">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000013">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:36080"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="Reaction1" metaid="metaid_0000014" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000014">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006461"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="A" metaid="_153491"/>
+          <speciesReference species="R" metaid="_153503"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C" metaid="_153515"/>
+        </listOfProducts>
+        <kineticLaw metaid="_153527">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> A </ci>
+              <ci> R </ci>
+              <ci> gammaC </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="gammaC" metaid="_809561" value="2"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction2" metaid="metaid_0000015" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000015">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0030163"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="A" metaid="_153539"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="EmptySet" metaid="_153551"/>
+        </listOfProducts>
+        <kineticLaw metaid="_153563">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> A </ci>
+              <ci> deltaA </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="deltaA" metaid="_809563" value="1"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction3" metaid="metaid_0000016" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000016">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0030163"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="C" metaid="_153576"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="R" metaid="_153588"/>
+        </listOfProducts>
+        <kineticLaw metaid="_153601">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> C </ci>
+              <ci> deltaA </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="deltaA" metaid="_809565" value="1"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction4" metaid="metaid_0000017" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000017">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0030163"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="R" metaid="_153613"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="EmptySet" metaid="_153625"/>
+        </listOfProducts>
+        <kineticLaw metaid="_153637">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> R </ci>
+              <ci> deltaR </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="deltaR" metaid="_809566" value="0.2"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction5" metaid="metaid_0000018" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000018">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0016563"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="A" metaid="_153650"/>
+          <speciesReference species="DA" metaid="_153662"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="DAp" metaid="_153674"/>
+        </listOfProducts>
+        <kineticLaw metaid="_153686">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> A </ci>
+              <ci> DA </ci>
+              <ci> gammaA </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="gammaA" metaid="_809567" value="1"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction6" metaid="metaid_0000019" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000019">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0032986"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="DAp" metaid="_153698"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="A" metaid="_153710"/>
+          <speciesReference species="DA" metaid="_153722"/>
+        </listOfProducts>
+        <kineticLaw metaid="_153734">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> DAp </ci>
+              <ci> thetaA </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="thetaA" metaid="_809569" value="50"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction7" metaid="metaid_0000020" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000020">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006351"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="DA" metaid="_153746"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="DA" metaid="_153758"/>
+          <speciesReference species="MA" metaid="_153770"/>
+        </listOfProducts>
+        <kineticLaw metaid="_153782">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> DA </ci>
+              <ci> alphaA </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="alphaA" metaid="_809570" value="50"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction8" metaid="metaid_0000021" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000021">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006351"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="DAp" metaid="_153794"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="DAp" metaid="_153806"/>
+          <speciesReference species="MA" metaid="_153818"/>
+        </listOfProducts>
+        <kineticLaw metaid="_153831">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> DAp </ci>
+              <ci> alphaAp </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="alphaAp" metaid="_809572" value="500"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction9" metaid="metaid_0000022" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000022">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006402"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="MA" metaid="_153843"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="EmptySet" metaid="_153855"/>
+        </listOfProducts>
+        <kineticLaw metaid="_153867">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> MA </ci>
+              <ci> deltaMA </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="deltaMA" metaid="_809573" value="10"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction10" metaid="metaid_0000023" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000023">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006412"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="MA" metaid="_153879"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="A" metaid="_153891"/>
+          <speciesReference species="MA" metaid="_153903"/>
+        </listOfProducts>
+        <kineticLaw metaid="_153915">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> MA </ci>
+              <ci> betaA </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="betaA" metaid="_809575" value="50"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction11" metaid="metaid_0000024" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000024">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0016563"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0010843"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="A" metaid="_153927"/>
+          <speciesReference species="DR" metaid="_153939"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="DRp" metaid="_153951"/>
+        </listOfProducts>
+        <kineticLaw metaid="_153964">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> A </ci>
+              <ci> DR </ci>
+              <ci> gammaR </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="gammaR" metaid="_809576" value="1"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction12" metaid="metaid_0000025" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000025">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0032986"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="DRp" metaid="_153976"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="A" metaid="_153988"/>
+          <speciesReference species="DR" metaid="_154000"/>
+        </listOfProducts>
+        <kineticLaw metaid="_154012">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> DRp </ci>
+              <ci> thetaR </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="thetaR" metaid="_809577" value="100"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction13" metaid="metaid_0000026" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000026">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006351"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="DR" metaid="_154025"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="DR" metaid="_154037"/>
+          <speciesReference species="MR" metaid="_154049"/>
+        </listOfProducts>
+        <kineticLaw metaid="_154061">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> DR </ci>
+              <ci> alphaR </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="alphaR" metaid="_809579" value="0.01"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction14" metaid="metaid_0000027" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000027">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006351"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="DRp" metaid="_154073"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="DRp" metaid="_154085"/>
+          <speciesReference species="MR" metaid="_154097"/>
+        </listOfProducts>
+        <kineticLaw metaid="_154109">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> DRp </ci>
+              <ci> alphaRp </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="alphaRp" metaid="_809580" value="50"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction15" metaid="metaid_0000028" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000028">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006402"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="MR" metaid="_154121"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="EmptySet" metaid="_154133"/>
+        </listOfProducts>
+        <kineticLaw metaid="_154145">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> MR </ci>
+              <ci> deltaMR </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="deltaMR" metaid="_809582" value="0.5"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Reaction16" metaid="metaid_0000029" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000029">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006412"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="MR" metaid="_154157"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MR" metaid="_154169"/>
+          <speciesReference species="R" metaid="_154182"/>
+        </listOfProducts>
+        <kineticLaw metaid="_154194">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> MR </ci>
+              <ci> betaR </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="betaR" metaid="_809583" value="5"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

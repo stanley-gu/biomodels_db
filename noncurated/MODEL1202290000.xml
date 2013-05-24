@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" metaid="_947364" version="4">
+  <model id="Proctor2012_AmyloidbetaAggregation" name="Proctor2012_AmyloidbetaAggregation" metaid="_947376">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>This model is from the article:      <br/>
+                <strong>Aggregation, impaired degradation and immunization targeting of amyloid-beta dimers in Alzheimer's disease: a stochastic modelling approach.</strong>
+                <br/>
+          Proctor CJ, Pienaar IS, Elson J, Kirkwood TB.      <em>Mol Neurodegener.</em>
+          2012 Jul 2;7(1):32.      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22748062">22748062</a>
+          ,      <br/>
+                <strong>Abstract:</strong>
+                <br/>
+          BACKGROUND:
+
+Alzheimer's disease (AD) is the most frequently diagnosed neurodegenerative disorder affecting humans, with advanced age being the most prominent risk factor for developing AD. Despite intense research efforts aimed at elucidating the precise molecular underpinnings of AD, a definitive answer is still lacking. In recent years, consensus has grown that dimerisation of the polypeptide amyloid-beta (ASZ), particularly ASZ42, plays a crucial role in the neuropathology that characterise AD-affected post-mortem brains, including the large-scale accumulation of fibrils, also referred to as senile plaques. This has led to the realistic hope that targeting ASZ42 immunotherapeutically could drastically reduce plaque burden in the ageing brain, thus delaying AD onset or symptom progression. Stochastic modelling is a useful tool for increasing understanding of the processes underlying complex systems-affecting disorders such as AD, providing a rapid and inexpensive strategy for testing putative new therapies. In light of the tool's utility, we developed computer simulation models to examine ASZ42 turnover and its aggregation in detail and to test the effect of immunization against ASZ dimers.
+RESULTS:
+
+Our model demonstrates for the first time that even a slight decrease in the clearance rate of ASZ42 monomers is sufficient to increase the chance of dimers forming, which could act as instigators of protofibril and fibril formation, resulting in increased plaque levels. As the process is slow and levels of Abeta are normally low, stochastic effects are important. Our model predicts that reducing the rate of dimerisation leads to a significant reduction in plaque levels and delays onset of plaque formation. The model was used to test the effect of an antibody mediated immunological response. Our results showed that plaque levels were reduced compared to conditions where antibodies are not present.
+CONCLUSION:
+
+Our model supports the current thinking that levels of dimers are important in initiating the aggregation process. Although substantial knowledge exists regarding the process, no therapeutic intervention is on offer that reliably decreases disease burden in AD patients. Computer modelling could serve as one of a number of tools to examine both the validity of reliable biomarkers and aid the discovery of successful intervention strategies.      </p>
+            </body>
+      
+    </notes>
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+        <rdf:Description rdf:about="#_947376">
+          <dcterms:created rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-08-01T16:30:24Z</dcterms:W3CDTF>
+          </dcterms:created>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-08-01T16:30:24Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1202290000"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/pubmed/22748062"/>
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:biomodels.db:MODEL1202290000"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:biomodels.db:MODEL1202290000"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:pubmed:22748062"/>
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+      <listOfUnitDefinitions>
+      <unitDefinition id="substance" metaid="_947388">
+        <listOfUnits>
+          <unit metaid="_947400" kind="item"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="cell" metaid="_947412" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="Abeta" initialAmount="0" hasOnlySubstanceUnits="true" name="AbetaMonomer" metaid="_947424" compartment="cell"/>
+      <species id="AbDim" initialAmount="0" hasOnlySubstanceUnits="true" name="AbetaDimer" metaid="_947436" compartment="cell"/>
+      <species id="AbP" initialAmount="0" hasOnlySubstanceUnits="true" name="AbetaPlaque" metaid="_947448" compartment="cell"/>
+      <species id="Source" constant="true" initialAmount="1" hasOnlySubstanceUnits="true" metaid="_947460" boundaryCondition="true" compartment="cell"/>
+      <species id="Sink" constant="true" initialAmount="1" hasOnlySubstanceUnits="true" metaid="_947472" boundaryCondition="true" compartment="cell"/>
+      <species id="Nep" initialAmount="1000" hasOnlySubstanceUnits="true" name="Neprilysin" metaid="_947484" compartment="cell"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="kprod" metaid="_947496" value="1.86E-5"/>
+      <parameter id="kdeg" metaid="_947508" value="2.1E-5"/>
+      <parameter id="kdimer" metaid="_947520" value="1.1783E-7"/>
+      <parameter id="kdedimer" metaid="_947532" value="8.4655E-6"/>
+      <parameter id="kdisagg" metaid="_947544" value="5.4357E-5"/>
+      <parameter id="kpf" metaid="_947556" value="2.785E-6"/>
+      <parameter id="kpg" metaid="_947568" value="0.00574"/>
+      <parameter id="kpghalf" metaid="_947580" value="4"/>
+      <parameter id="kdegNep" metaid="_947592" value="1.8E-10"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="Abetaproduction" metaid="_947604" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Source" metaid="_947616"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Abeta" metaid="_947628"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Source" metaid="_309496"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_947640">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kprod </ci>
+              <ci> Source </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="AbetaDegradation" metaid="_947652" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Abeta" metaid="_947664"/>
+          <speciesReference species="Nep" metaid="_947676"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sink" metaid="_947688"/>
+          <speciesReference species="Nep" metaid="_947700"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Abeta" metaid="_309508"/>
+          <modifierSpeciesReference species="Nep" metaid="_309520"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_947712">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdeg </ci>
+              <ci> Abeta </ci>
+              <ci> Nep </ci>
+              <cn> 0.001 </cn>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="AbetaDimerisation" metaid="_947724" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Abeta" metaid="_947736" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AbDim" metaid="_947748"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Abeta" metaid="_309532"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_947760">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdimer </ci>
+              <ci> Abeta </ci>
+              <apply>
+                <minus/>
+                <ci> Abeta </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+              <cn> 0.5 </cn>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="AbetaDedimerisation" metaid="_947772" reversible="false">
+        <listOfReactants>
+          <speciesReference species="AbDim" metaid="_947784"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Abeta" metaid="_947796" stoichiometry="2"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="AbDim" metaid="_309544"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_947808">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdedimer </ci>
+              <ci> AbDim </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="AbetaPlaqueFormation" metaid="_947820" reversible="false">
+        <listOfReactants>
+          <speciesReference species="AbDim" metaid="_947832" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AbP" metaid="_947844" stoichiometry="4"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="AbDim" metaid="_309556"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_947856">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kpf </ci>
+              <ci> AbDim </ci>
+              <apply>
+                <minus/>
+                <ci> AbDim </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+              <cn> 0.5 </cn>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="AbetaPlaqueGrowth" metaid="_947868" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Abeta" metaid="_947880"/>
+          <speciesReference species="AbP" metaid="_947892"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AbP" metaid="_947904" stoichiometry="2"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Abeta" metaid="_309568"/>
+          <modifierSpeciesReference species="AbP" metaid="_309580"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_947916">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> kpg </ci>
+                <ci> Abeta </ci>
+                <apply>
+                  <power/>
+                  <ci> AbP </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <power/>
+                  <ci> kpghalf </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <ci> AbP </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="AbetaDisaggregation" metaid="_947928" reversible="false">
+        <listOfReactants>
+          <speciesReference species="AbP" metaid="_947940"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Abeta" metaid="_947952"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="AbP" metaid="_309592"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_947964">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdisagg </ci>
+              <ci> AbP </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="NepDegradation" metaid="_947976" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Nep" metaid="_947988"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sink" metaid="_948000"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Nep" metaid="_309604"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_948012">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdegNep </ci>
+              <ci> Nep </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

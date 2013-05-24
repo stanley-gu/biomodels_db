@@ -1,0 +1,378 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2" level="2" metaid="metaid_0000001" version="1">
+  <model id="Brands2002_MonosaccharideCasein" name="Brands2002_MonosaccharideCasein" metaid="metaid_0000002">
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+        <rdf:Description rdf:about="#metaid_0000002">
+          <dc:creator>
+            <rdf:Bag>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Dharuri</vCard:Family>
+                  <vCard:Given>Harish</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>Harish_Dharuri@kgi.edu</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>Keck Graduate Institute</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+            </rdf:Bag>
+          </dc:creator>
+          <dcterms:created rdf:parseType="Resource">
+            <dcterms:W3CDTF>2006-01-25T22:00:14Z</dcterms:W3CDTF>
+          </dcterms:created>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-04-20T18:21:34Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL8177704759"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/biomodels.db/BIOMD0000000052"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/pubmed/12405768"/>
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+          <bqbiol:isVersionOf>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0048029"/>
+            </rdf:Bag>
+          </bqbiol:isVersionOf>
+          <bqbiol:occursIn>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/taxonomy/131567"/>
+            </rdf:Bag>
+          </bqbiol:occursIn>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+      <listOfUnitDefinitions>
+      <unitDefinition id="substance" name="millimole (default)" metaid="metaid_0000003">
+        <listOfUnits>
+          <unit scale="-3" metaid="_447458" offset="0" multiplier="1" kind="mole"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="time" name="minute (default)" metaid="metaid_0000004">
+        <listOfUnits>
+          <unit metaid="_447470" offset="0" multiplier="60" kind="second"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="compartment" metaid="metaid_0000005" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="Glu" initialConcentration="160" metaid="metaid_0000006" compartment="compartment">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000006">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:17234"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00293"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="Fru" initialConcentration="0" metaid="metaid_0000007" compartment="compartment">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000007">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:28757"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01496"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="Formic_acid" initialConcentration="0" metaid="metaid_0000008" compartment="compartment">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000008">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:30751"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00058"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="Triose" initialConcentration="0" metaid="metaid_0000009" compartment="compartment"/>
+      <species id="Acetic_acid" initialConcentration="0" metaid="metaid_0000010" compartment="compartment">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000010">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:15366"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00033"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="Cn" initialConcentration="0" metaid="metaid_0000011" compartment="compartment"/>
+      <species id="Amadori" initialConcentration="0" metaid="metaid_0000013" compartment="compartment"/>
+      <species id="AMP" initialConcentration="0" metaid="metaid_0000014" compartment="compartment"/>
+      <species id="C5" initialConcentration="0" metaid="metaid_0000015" compartment="compartment"/>
+      <species id="lys_R" initialConcentration="15" metaid="metaid_0000016" compartment="compartment">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0000016">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:32568"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="Melanoidin" initialConcentration="0" metaid="metaid_0000017" compartment="compartment"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="_J1" metaid="metaid_0000018" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Glu" metaid="_447482"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Fru" metaid="_447494"/>
+        </listOfProducts>
+        <kineticLaw metaid="_447506">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> K1 </ci>
+              <ci> Glu </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="K1" metaid="_447518" value="0.01"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J2" metaid="metaid_0000019" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Fru" metaid="_447530"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Glu" metaid="_447542"/>
+        </listOfProducts>
+        <kineticLaw metaid="_447554">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> K2 </ci>
+              <ci> Fru </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="K2" metaid="_447566" value="0.00509"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J3" metaid="metaid_0000020" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Glu" metaid="_447578"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C5" metaid="_447590"/>
+          <speciesReference species="Formic_acid" metaid="_447602"/>
+        </listOfProducts>
+        <kineticLaw metaid="_447614">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> K3 </ci>
+              <ci> Glu </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="K3" metaid="_447626" value="0.00047"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J4" metaid="metaid_0000021" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Fru" metaid="_447638"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C5" metaid="_447650"/>
+          <speciesReference species="Formic_acid" metaid="_447662"/>
+        </listOfProducts>
+        <kineticLaw metaid="_447674">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> K4 </ci>
+              <ci> Fru </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="K4" metaid="_447686" value="0.0011"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J5" metaid="metaid_0000022" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Fru" metaid="_447698"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Triose" metaid="_447710" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw metaid="_447722">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> K5 </ci>
+              <ci> Fru </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="K5" metaid="_447734" value="0.00712"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J6" metaid="metaid_0000023" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Triose" metaid="_447746"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Cn" metaid="_447758"/>
+          <speciesReference species="Acetic_acid" metaid="_447770"/>
+        </listOfProducts>
+        <kineticLaw metaid="_447782">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> K6 </ci>
+              <ci> Triose </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="K6" metaid="_447794" value="0.00439"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J7" metaid="metaid_0000024" reversible="false">
+        <listOfReactants>
+          <speciesReference species="lys_R" metaid="_447806"/>
+          <speciesReference species="Glu" metaid="_447818"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Amadori" metaid="_447830"/>
+        </listOfProducts>
+        <kineticLaw metaid="_447842">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> K7 </ci>
+              <ci> Glu </ci>
+              <ci> lys_R </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="K7" metaid="_447854" value="0.00018"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J8" metaid="metaid_0000025" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Amadori" metaid="_447866"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Acetic_acid" metaid="_447878"/>
+          <speciesReference species="lys_R" metaid="_447890"/>
+        </listOfProducts>
+        <kineticLaw metaid="_447903">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> K8 </ci>
+              <ci> Amadori </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="K8" metaid="_447916" value="0.11134"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J9" metaid="metaid_0000026" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Amadori" metaid="_447928"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AMP" metaid="_447940"/>
+        </listOfProducts>
+        <kineticLaw metaid="_447952">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> K9 </ci>
+              <ci> Amadori </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="K9" metaid="_447964" value="0.14359"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J10" metaid="metaid_0000027" reversible="false">
+        <listOfReactants>
+          <speciesReference species="lys_R" metaid="_447976"/>
+          <speciesReference species="Fru" metaid="_447988"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AMP" metaid="_448000"/>
+        </listOfProducts>
+        <kineticLaw metaid="_448013">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> K10 </ci>
+              <ci> Fru </ci>
+              <ci> lys_R </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="K10" metaid="_448026" value="0.00015"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J11" metaid="metaid_0000028" reversible="false">
+        <listOfReactants>
+          <speciesReference species="AMP" metaid="_448038"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Melanoidin" metaid="_448050"/>
+        </listOfProducts>
+        <kineticLaw metaid="_448062">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> K11 </ci>
+              <ci> AMP </ci>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="K11" metaid="_448075" value="0.12514"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

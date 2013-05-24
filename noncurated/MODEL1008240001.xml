@@ -1,0 +1,1707 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" level="2" metaid="_863422" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="4">
+  <model id="cakir04" name="Çakir2004_CentralCarbonMetabolism_Yeast" metaid="metaid_cakir04">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>This is an SBML version of the reaction network used in the article:      <br/>
+                <strong>Metabolic pathway analysis of yeast strengthens the bridge between transcriptomics and metabolic networks</strong>
+                <br/>
+                <em>Tunahan Çakir, Betül Kirdar, Kutlu Ö. Ülgen. Biotechnol Bioeng 2004 86:251-60;</em>
+          PubmedID:      <a href="http://www.ncbi.nlm.nih.gov/pubmed/15083505">15083505</a>
+          ; DOI:      <a href="http://dx.doi.org/10.1002/bit.20020">10.1002/bit.20020</a>
+                <br/>
+          Abstract:      <br/>
+          Central carbon metabolism of the yeast Saccharomyces cerevisiae was analyzed using metabolic pathway analysis tools. Elementary flux modes for three substrates (glucose, galactose, and ethanol) were determined using the catabolic reactions occurring in yeast. Resultant elementary modes were used for gene deletion phenotype analysis and for the analysis of robustness of the central metabolism and network functionality. Control-effective fluxes, determined by calculating the efficiency of each mode, were used for the prediction of transcript ratios of metabolic genes in different growth media (glucose-ethanol and galactose-ethanol). A high correlation was obtained between the theoretical and experimental expression levels of 38 genes when ethanol and glucose media were considered. Such analysis was shown to be a bridge between transcriptomics and fluxomics. Control-effective flux distribution was found to be promising in in silico predictions by incorporating functionality and regulation into the metabolic network structure.      </p>
+            <p>Some typographical errors in the paper have been corrected:      <ol>        <li>Reaction (49) has substrate NADcyt (rather than NADmit)</li>
+                    <li>Reaction (53) is missing products 90 NADPcyt</li>
+                    <li>CO2 and O2 are also set as external metabolites</li>
+                    </ol>
+                </p>
+            <p>This model originates from BioModels Database: A Database of Annotated Published Models (http://www.ebi.ac.uk/biomodels/). It is copyright (c) 2005-2011 The BioModels.net Team.      <br/>
+          To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. Please refer to      <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a>
+          for more information.      </p>
+            <p>In summary, you are entitled to use this encoded model in absolutely any manner you deem suitable, verbatim, or with modification, alone or embedded it in a larger context, redistribute it, commercially or not, in a restricted way or not.
+          .      <br/>
+                <br/>
+          To cite BioModels Database, please use:      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20587024" target="_blank">Li C, Donizelli M, Rodriguez N, Dharuri H, Endler L, Chelliah V, Li L, He E, Henry A, Stefan MI, Snoep JL, Hucka M, Le Novère N, Laibe C (2010) BioModels Database: An enhanced, curated and annotated resource for published quantitative kinetic models. BMC Syst Biol., 4:92.</a>
+                </p>
+            </body>
+      
+    </notes>
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+        <rdf:Description rdf:about="#metaid_cakir04">
+          <dc:creator>
+            <rdf:Bag>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Oshota</vCard:Family>
+                  <vCard:Given>Olusegun</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>olusegun.j.oshota@postgrad.manchester.ac.uk</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>University of Manchester</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Smallbone</vCard:Family>
+                  <vCard:Given>Kieran</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>kieran.smallbone@manchester.ac.uk</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>University of Manchester</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Smallbone</vCard:Family>
+                  <vCard:Given>Kieran</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>kieran.smallbone@manchester.ac.uk</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>University of Manchester</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Oshota</vCard:Family>
+                  <vCard:Given>Olusegun</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>olusegun.j.oshota@postgrad.manchester.ac.uk</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>University of Manchester</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Smallbone</vCard:Family>
+                  <vCard:Given>Kieran</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>kieran.smallbone@manchester.ac.uk</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>University of Manchester</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Oshota</vCard:Family>
+                  <vCard:Given>Olusegun</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>olusegun.j.oshota@postgrad.manchester.ac.uk</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>University of Manchester</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+            </rdf:Bag>
+          </dc:creator>
+          <dcterms:created rdf:parseType="Resource">
+            <dcterms:W3CDTF>2010-08-16T00:00:00Z</dcterms:W3CDTF>
+          </dcterms:created>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-02-03T12:21:44Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-02-03T12:21:44Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-02-03T12:21:44Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-02-03T12:21:44Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1008240001"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqbiol:occursIn>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/taxonomy/4932"/>
+            </rdf:Bag>
+          </bqbiol:occursIn>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/pubmed/15083505"/>
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1008240001"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/pubmed/15083505"/>
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:biomodels.db:MODEL1008240001"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:biomodels.db:MODEL1008240001"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:pubmed:15083505"/>
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+      <listOfCompartments>
+      <compartment id="cell" name="cell" metaid="metaid_cell" size="1">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_cell">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0005622"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="ACAL" name="ACAL" metaid="_863434" compartment="cell"/>
+      <species id="ACCOAcyt" name="ACCOAcyt" metaid="_863446" compartment="cell"/>
+      <species id="ACCOAmit" name="ACCOAmit" metaid="_863458" compartment="cell"/>
+      <species id="ADP" name="ADP" metaid="_863470" compartment="cell"/>
+      <species id="AKG" name="AKG" metaid="_863482" compartment="cell"/>
+      <species id="ATP" name="ATP" metaid="_863494" compartment="cell"/>
+      <species id="CIT" name="CIT" metaid="_863506" compartment="cell"/>
+      <species id="DHAP" name="DHAP" metaid="_863518" compartment="cell"/>
+      <species id="E4P" name="E4P" metaid="_863531" compartment="cell"/>
+      <species id="FAD" name="FAD" metaid="_863543" compartment="cell"/>
+      <species id="FADH2" name="FADH2" metaid="_863555" compartment="cell"/>
+      <species id="FRUC6P" name="FRUC6P" metaid="_863567" compartment="cell"/>
+      <species id="FRUCDP" name="FRUCDP" metaid="_863579" compartment="cell"/>
+      <species id="FUM" name="FUM" metaid="_863591" compartment="cell"/>
+      <species id="G15L" name="G15L" metaid="_863603" compartment="cell"/>
+      <species id="GA3P" name="GA3P" metaid="_863615" compartment="cell"/>
+      <species id="GLUC6P" name="GLUC6P" metaid="_863628" compartment="cell"/>
+      <species id="GLYO" name="GLYO" metaid="_863640" compartment="cell"/>
+      <species id="GOH3P" name="GOH3P" metaid="_863652" compartment="cell"/>
+      <species id="ISOCIT" name="ISOCIT" metaid="_863664" compartment="cell"/>
+      <species id="MAL" name="MAL" metaid="_863676" compartment="cell"/>
+      <species id="NADcyt" name="NADcyt" metaid="_863689" compartment="cell"/>
+      <species id="NADHcyt" name="NADHcyt" metaid="_863701" compartment="cell"/>
+      <species id="NADHmit" name="NADHmit" metaid="_863714" compartment="cell"/>
+      <species id="NADmit" name="NADmit" metaid="_863726" compartment="cell"/>
+      <species id="NADPcyt" name="NADPcyt" metaid="_863738" compartment="cell"/>
+      <species id="NADPHcyt" name="NADPHcyt" metaid="_863750" compartment="cell"/>
+      <species id="NADPHmit" name="NADPHmit" metaid="_863762" compartment="cell"/>
+      <species id="NADPmit" name="NADPmit" metaid="_863774" compartment="cell"/>
+      <species id="OAC" name="OAC" metaid="_863786" compartment="cell"/>
+      <species id="P13G" name="P13G" metaid="_863798" compartment="cell"/>
+      <species id="P2G" name="P2G" metaid="_863810" compartment="cell"/>
+      <species id="P3G" name="P3G" metaid="_863823" compartment="cell"/>
+      <species id="P6G" name="P6G" metaid="_863835" compartment="cell"/>
+      <species id="PEP" name="PEP" metaid="_863847" compartment="cell"/>
+      <species id="PYR" name="PYR" metaid="_863860" compartment="cell"/>
+      <species id="RIB5P" name="RIB5P" metaid="_863872" compartment="cell"/>
+      <species id="RIBL5P" name="RIBL5P" metaid="_863884" compartment="cell"/>
+      <species id="SED7P" name="SED7P" metaid="_863896" compartment="cell"/>
+      <species id="SUC" name="SUC" metaid="_863908" compartment="cell"/>
+      <species id="SUCCOA" name="SUCCOA" metaid="_863920" compartment="cell"/>
+      <species id="XYL5P" name="XYL5P" metaid="_863933" compartment="cell"/>
+      <species id="AC_b" name="AC" metaid="_863945" boundaryCondition="true" compartment="cell"/>
+      <species id="BIOM_b" name="BIOM" metaid="_863957" boundaryCondition="true" compartment="cell"/>
+      <species id="CO2_b" name="CO2" metaid="_863969" boundaryCondition="true" compartment="cell"/>
+      <species id="ETOH_b" name="ETOH" metaid="_863981" boundaryCondition="true" compartment="cell"/>
+      <species id="GAL_b" name="GAL" metaid="_863993" boundaryCondition="true" compartment="cell"/>
+      <species id="GLUC_b" name="GLUC" metaid="_864005" boundaryCondition="true" compartment="cell"/>
+      <species id="GOH_b" name="GOH" metaid="_864017" boundaryCondition="true" compartment="cell"/>
+      <species id="O2_b" name="O2" metaid="_864029" boundaryCondition="true" compartment="cell"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="r01" name="glucokinase, hexokinase" metaid="_864041" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YCL040W OR YFR053C OR YGL253W)</p>
+                    <p>PROTEIN_ASSOCIATION:(GLK1 OR HXK1 OR HXK2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="GLUC_b" metaid="_864053"/>
+          <speciesReference species="ATP" metaid="_864065"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GLUC6P" metaid="_864077"/>
+          <speciesReference species="ADP" metaid="_864089"/>
+        </listOfProducts>
+        <kineticLaw metaid="_864101">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_864113" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_864125" value="1" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_864137" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_864149" value="1"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r02" name="galactokinase" metaid="_864161" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YBR020W OR YMR105C OR YBR018C)</p>
+                    <p>PROTEIN_ASSOCIATION:(GAL1 OR GAL5 OR GAL7)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="GAL_b" metaid="_864173"/>
+          <speciesReference species="ATP" metaid="_864185"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GLUC6P" metaid="_864197"/>
+          <speciesReference species="ADP" metaid="_864209"/>
+        </listOfProducts>
+        <kineticLaw metaid="_864221">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_864233" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_864245" value="0" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_864257" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_864269" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r03" name="alcohol dehydrogenase" metaid="_864281" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YMR303C</p>
+                    <p>PROTEIN_ASSOCIATION:ADH2</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="ETOH_b" metaid="_864293"/>
+          <speciesReference species="NADcyt" metaid="_864305"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ACAL" metaid="_864317"/>
+          <speciesReference species="NADHcyt" metaid="_864329"/>
+        </listOfProducts>
+        <kineticLaw metaid="_864341">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_864353" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_864365" value="0" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_864377" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_864389" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r04" name="glucose-6-phosphate isomerase" metaid="_864401">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YBR196C</p>
+                    <p>PROTEIN_ASSOCIATION:PGI1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="GLUC6P" metaid="_864413"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="FRUC6P" metaid="_864425"/>
+        </listOfProducts>
+        <kineticLaw metaid="_864437">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_864449" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_864461" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_864473" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_864485" value="-0.1111"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r05" name="phosphofructokinase" metaid="_864497" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YGR240C OR YMR205C)</p>
+                    <p>PROTEIN_ASSOCIATION:(PFK1 OR PFK2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="FRUC6P" metaid="_864509"/>
+          <speciesReference species="ATP" metaid="_864521"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="FRUCDP" metaid="_864533"/>
+          <speciesReference species="ADP" metaid="_864545"/>
+        </listOfProducts>
+        <kineticLaw metaid="_864557">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_864569" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_864581" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_864593" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_864605" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r06" name="fructose 1,6-biphosphatase" metaid="_864617" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YLR377C</p>
+                    <p>PROTEIN_ASSOCIATION:FBP1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="FRUCDP" metaid="_864629"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="FRUC6P" metaid="_864641"/>
+        </listOfProducts>
+        <kineticLaw metaid="_864653">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_864665" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_864677" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_864690" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_864702" value="0.2444"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r07" name="aldolase" metaid="_864714">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YKL060C</p>
+                    <p>PROTEIN_ASSOCIATION:FBA1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="FRUCDP" metaid="_864726"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GA3P" metaid="_864738"/>
+          <speciesReference species="DHAP" metaid="_864751"/>
+        </listOfProducts>
+        <kineticLaw metaid="_864764">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_864776" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_864788" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_864800" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_864812" value="-0.2444"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r08" name="triosephosphate isomerase" metaid="_864824">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YDR050C</p>
+                    <p>PROTEIN_ASSOCIATION:TPI1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="DHAP" metaid="_864836"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GA3P" metaid="_864848"/>
+        </listOfProducts>
+        <kineticLaw metaid="_864860">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_864873" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_864885" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_864897" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_864910" value="-0.2889"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r09" name="glyceraldehyde-3-phosphate dehydrogenase" metaid="_864923">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YJL052W OR YJR009C OR YGR192C)</p>
+                    <p>PROTEIN_ASSOCIATION:(TDH1 OR TDH2 OR TDH3)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="GA3P" metaid="_864936"/>
+          <speciesReference species="NADcyt" metaid="_864949"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="P13G" metaid="_864962"/>
+          <speciesReference species="NADHcyt" metaid="_864976"/>
+        </listOfProducts>
+        <kineticLaw metaid="_864988">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_865000" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_865012" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_865024" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_865036" value="-0.6667"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r10" name="3-phosphogycerate kinase" metaid="_865048">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YCR012W</p>
+                    <p>PROTEIN_ASSOCIATION:PGK1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="P13G" metaid="_865060"/>
+          <speciesReference species="ADP" metaid="_865072"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="P3G" metaid="_865084"/>
+          <speciesReference species="ATP" metaid="_865096"/>
+        </listOfProducts>
+        <kineticLaw metaid="_865109">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_865121" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_865133" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_865145" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_865157" value="-0.6667"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r11" name="phosphoglycerate mutase" metaid="_865169">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YKL152C OR YDL021W OR YOL056W)</p>
+                    <p>PROTEIN_ASSOCIATION:(GPM1 OR GPM2 OR GPM3)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="P3G" metaid="_865181"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="P2G" metaid="_865193"/>
+        </listOfProducts>
+        <kineticLaw metaid="_865206">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_865219" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_865231" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_865243" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_865255" value="-0.9333"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r12" name="enolase" metaid="_865267">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YGR254W OR YHR174W)</p>
+                    <p>PROTEIN_ASSOCIATION:(ENO1 OR ENO2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="P2G" metaid="_865279"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PEP" metaid="_865292"/>
+        </listOfProducts>
+        <kineticLaw metaid="_865304">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_865316" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_865328" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_865340" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_865352" value="-0.9333"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r13" name="pyruvate kinase" metaid="_865364" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YAL038W OR YOR347C)</p>
+                    <p>PROTEIN_ASSOCIATION:(PYK1 OR PYK2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="PEP" metaid="_865376"/>
+          <speciesReference species="ADP" metaid="_865388"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PYR" metaid="_865400"/>
+          <speciesReference species="ATP" metaid="_865412"/>
+        </listOfProducts>
+        <kineticLaw metaid="_865424">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_865436" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_865448" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_865460" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_865472" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r14" name="glycerol-3-phosphate dehydrogenase" metaid="_865484" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YDL022W OR YOL059W)</p>
+                    <p>PROTEIN_ASSOCIATION:(GPD1 OR GPD2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="DHAP" metaid="_865496"/>
+          <speciesReference species="NADHcyt" metaid="_865508"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GOH3P" metaid="_865520"/>
+          <speciesReference species="NADcyt" metaid="_865532"/>
+        </listOfProducts>
+        <kineticLaw metaid="_865544">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_865556" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_865568" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_865580" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_865592" value="0.04444"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r15" name="aldehyde dehydrogenase (NADPcyt- dependent)" metaid="_865604">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YPL061W</p>
+                    <p>PROTEIN_ASSOCIATION:ALD6</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="ACAL" metaid="_865616"/>
+          <speciesReference species="NADPcyt" metaid="_865628"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AC_b" metaid="_865640"/>
+          <speciesReference species="NADPHcyt" metaid="_865652"/>
+        </listOfProducts>
+        <kineticLaw metaid="_865664">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_865676" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_865688" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_865700" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_865712" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r16" name="glycerol phosphatase" metaid="_865724" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YIL053W OR YER062C)</p>
+                    <p>PROTEIN_ASSOCIATION:(GPP1 OR GPP2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="GOH3P" metaid="_865736"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GOH_b" metaid="_865748"/>
+        </listOfProducts>
+        <kineticLaw metaid="_865760">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_865772" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_865784" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_865796" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_865808" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r17" name="pyruvate decarboxylase" metaid="_865820" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YLR044C OR YDR081C OR YLR134W)</p>
+                    <p>PROTEIN_ASSOCIATION:(PDC1 OR PDC2 OR PDC5)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="PYR" metaid="_865832"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ACAL" metaid="_865844"/>
+          <speciesReference species="CO2_b" metaid="_865856"/>
+        </listOfProducts>
+        <kineticLaw metaid="_865868">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_865881" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_865893" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_865905" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_865917" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r18" name="alcohol dehydrogenase" metaid="_865929" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YOL086C OR YGL256W)</p>
+                    <p>PROTEIN_ASSOCIATION:(ADH1 OR ADH4)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="ACAL" metaid="_865941"/>
+          <speciesReference species="NADHcyt" metaid="_865954"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ETOH_b" metaid="_865966"/>
+          <speciesReference species="NADcyt" metaid="_865978"/>
+        </listOfProducts>
+        <kineticLaw metaid="_865990">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_866002" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_866014" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_866026" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_866038" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r19" name="aldehyde dehydrogenase (NADPmit- dependent)" metaid="_866050" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YOR374W</p>
+                    <p>PROTEIN_ASSOCIATION:ALD4</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="ACAL" metaid="_866062"/>
+          <speciesReference species="NADmit" metaid="_866074"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AC_b" metaid="_866086"/>
+          <speciesReference species="NADHmit" metaid="_866098"/>
+        </listOfProducts>
+        <kineticLaw metaid="_866110">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_866122" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_866134" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_866146" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_866158" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r20" name="acetyl-coenzyme A synthetase" metaid="_866170" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YAL054C OR YLR153C)</p>
+                    <p>PROTEIN_ASSOCIATION:(ACS1 OR ACS2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="AC_b" metaid="_866182"/>
+          <speciesReference species="ATP" metaid="_866194" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ACCOAcyt" metaid="_866206"/>
+          <speciesReference species="ADP" metaid="_866218" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw metaid="_866230">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_866242" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_866254" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_866266" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_866278" value="13.81"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r21" name="pyruvate dehydrogenase" metaid="_866290" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YER178W OR YNL071W OR YBR221C)</p>
+                    <p>PROTEIN_ASSOCIATION:(PDA1 OR PDA2 OR PDB1)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="PYR" metaid="_866302"/>
+          <speciesReference species="NADmit" metaid="_866314"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ACCOAmit" metaid="_866326"/>
+          <speciesReference species="NADHmit" metaid="_866339"/>
+          <speciesReference species="CO2_b" metaid="_866351"/>
+        </listOfProducts>
+        <kineticLaw metaid="_866363">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_866375" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_866387" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_866399" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_866412" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r22" name="pyruvate carboxylase" metaid="_866424" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YGL062W OR YBR218C)</p>
+                    <p>PROTEIN_ASSOCIATION:(PYC1 OR PYC2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="PYR" metaid="_866436"/>
+          <speciesReference species="ATP" metaid="_866448"/>
+          <speciesReference species="CO2_b" metaid="_866460"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="OAC" metaid="_866472"/>
+          <speciesReference species="ADP" metaid="_866484"/>
+        </listOfProducts>
+        <kineticLaw metaid="_866496">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_866508" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_866520" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_866532" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_866544" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r23" name="phosphoenolpyruvate carboxykinase" metaid="_866556" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YKR097W</p>
+                    <p>PROTEIN_ASSOCIATION:PCK1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="OAC" metaid="_866568"/>
+          <speciesReference species="ATP" metaid="_866580"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PEP" metaid="_866592"/>
+          <speciesReference species="ADP" metaid="_866604"/>
+          <speciesReference species="CO2_b" metaid="_866616"/>
+        </listOfProducts>
+        <kineticLaw metaid="_866628">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_866640" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_866652" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_866664" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_866676" value="1.2"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r24" name="glucose-6-phosphate dehydrogenase" metaid="_866688" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YNL241C</p>
+                    <p>PROTEIN_ASSOCIATION:ZWF1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="GLUC6P" metaid="_866700"/>
+          <speciesReference species="NADPcyt" metaid="_866712"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="G15L" metaid="_866724"/>
+          <speciesReference species="NADPHcyt" metaid="_866736"/>
+        </listOfProducts>
+        <kineticLaw metaid="_866748">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_866760" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_866772" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_866784" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_866796" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r25" name="6-phosphogluconolactonase" metaid="_866808" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YNR034W OR YCR073W-A OR YHR163W OR YGR248W)</p>
+                    <p>PROTEIN_ASSOCIATION:(SOL1 OR SOL2 OR SOL3 OR SOL4)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="G15L" metaid="_866820"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="P6G" metaid="_866832"/>
+        </listOfProducts>
+        <kineticLaw metaid="_866844">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_866856" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_866868" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_866880" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_866892" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r26" name="phosphogluconate dehydrogenase" metaid="_866904" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YHR183W OR YGR256W)</p>
+                    <p>PROTEIN_ASSOCIATION:(GND1 OR GND2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="P6G" metaid="_866916"/>
+          <speciesReference species="NADPcyt" metaid="_866928"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="RIBL5P" metaid="_866940"/>
+          <speciesReference species="NADPHcyt" metaid="_866952"/>
+          <speciesReference species="CO2_b" metaid="_866964"/>
+        </listOfProducts>
+        <kineticLaw metaid="_866976">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_866988" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_867000" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_867012" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_867024" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r27" name="ribose 5-phosphate isomerase" metaid="_867036">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YOR095C</p>
+                    <p>PROTEIN_ASSOCIATION:RKI1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="RIBL5P" metaid="_867048"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="RIB5P" metaid="_867060"/>
+        </listOfProducts>
+        <kineticLaw metaid="_867072">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_867084" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_867096" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_867109" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_867121" value="0.1333"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r28" name="ribulose-phosphate 3-epimerase" metaid="_867133">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YJL121C</p>
+                    <p>PROTEIN_ASSOCIATION:RPE1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="RIBL5P" metaid="_867145"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="XYL5P" metaid="_867158"/>
+        </listOfProducts>
+        <kineticLaw metaid="_867170">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_867182" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_867195" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_867207" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_867219" value="-0.1333"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r29" name="transketolase" metaid="_867231">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YPR074C OR YBR117C)</p>
+                    <p>PROTEIN_ASSOCIATION:(TKL1 OR TKL2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="RIB5P" metaid="_867243"/>
+          <speciesReference species="XYL5P" metaid="_867255"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SED7P" metaid="_867267"/>
+          <speciesReference species="GA3P" metaid="_867279"/>
+        </listOfProducts>
+        <kineticLaw metaid="_867291">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_867303" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_867315" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_867327" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_867340" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r30" name="transaldolase" metaid="_867352">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YLR354C</p>
+                    <p>PROTEIN_ASSOCIATION:TAL1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="SED7P" metaid="_867364"/>
+          <speciesReference species="GA3P" metaid="_867376"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="FRUC6P" metaid="_867388"/>
+          <speciesReference species="E4P" metaid="_867400"/>
+        </listOfProducts>
+        <kineticLaw metaid="_867412">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_867424" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_867436" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_867448" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_867460" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r31" name="transketolase" metaid="_867472">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YPR074C OR YBR117C)</p>
+                    <p>PROTEIN_ASSOCIATION:(TKL1 OR TKL2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="XYL5P" metaid="_867484"/>
+          <speciesReference species="E4P" metaid="_867496"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="FRUC6P" metaid="_867508"/>
+          <speciesReference species="GA3P" metaid="_867520"/>
+        </listOfProducts>
+        <kineticLaw metaid="_867532">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_867544" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_867556" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_867568" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_867580" value="-0.1333"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r32" name="citrate synthase (cytosolic)" metaid="_867592" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YNR001C OR YPR001W)</p>
+                    <p>PROTEIN_ASSOCIATION:(CIT1 OR CIT3)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="OAC" metaid="_867604"/>
+          <speciesReference species="ACCOAmit" metaid="_867616"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CIT" metaid="_867629"/>
+        </listOfProducts>
+        <kineticLaw metaid="_867641">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_867653" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_867665" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_867678" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_867690" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r33" name="aconitate synthetase" metaid="_867703">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YLR304C</p>
+                    <p>PROTEIN_ASSOCIATION:ACO1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="CIT" metaid="_867715"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ISOCIT" metaid="_867727"/>
+        </listOfProducts>
+        <kineticLaw metaid="_867739">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_867752" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_867764" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_867776" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_867788" value="9.678"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r34" name="isocitrate dehydrogenase (NADmit- dependent)" metaid="_867800" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YNL037C OR YOR136W)</p>
+                    <p>PROTEIN_ASSOCIATION:(IDH1 OR IDH2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="ISOCIT" metaid="_867812"/>
+          <speciesReference species="NADmit" metaid="_867824"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AKG" metaid="_867836"/>
+          <speciesReference species="NADHmit" metaid="_867848"/>
+          <speciesReference species="CO2_b" metaid="_867860"/>
+        </listOfProducts>
+        <kineticLaw metaid="_867872">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_867884" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_867896" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_867908" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_867920" value="2.567"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r35" name="isocitrate dehydrogenase (NADPmit- dependent)" metaid="_867932" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YDL066W</p>
+                    <p>PROTEIN_ASSOCIATION:IDP1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="ISOCIT" metaid="_867944"/>
+          <speciesReference species="NADPmit" metaid="_867956"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AKG" metaid="_867968"/>
+          <speciesReference species="NADPHmit" metaid="_867981"/>
+          <speciesReference species="CO2_b" metaid="_867993"/>
+        </listOfProducts>
+        <kineticLaw metaid="_868005">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_868017" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_868030" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_868042" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_868054" value="0.1778"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r36" name="isocitrate dehydrogenase (NADPcyt- dependent)" metaid="_868066" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YLR174W</p>
+                    <p>PROTEIN_ASSOCIATION:IDP2</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="ISOCIT" metaid="_868078"/>
+          <speciesReference species="NADPcyt" metaid="_868090"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AKG" metaid="_868102"/>
+          <speciesReference species="NADPHcyt" metaid="_868114"/>
+          <speciesReference species="CO2_b" metaid="_868126"/>
+        </listOfProducts>
+        <kineticLaw metaid="_868138">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_868150" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_868162" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_868174" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_868186" value="4"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r37" name="alpha-ketogluterate dehydrogenase" metaid="_868198" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YIL125W OR YDR148C)</p>
+                    <p>PROTEIN_ASSOCIATION:(KGD1 OR KGD2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="AKG" metaid="_868210"/>
+          <speciesReference species="NADmit" metaid="_868222"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SUCCOA" metaid="_868234"/>
+          <speciesReference species="NADHmit" metaid="_868246"/>
+          <speciesReference species="CO2_b" metaid="_868258"/>
+        </listOfProducts>
+        <kineticLaw metaid="_868270">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_868282" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_868294" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_868306" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_868318" value="6.256"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r38" name="succinate-CoA ligase" metaid="_868330">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YOR142W OR YGR244C)</p>
+                    <p>PROTEIN_ASSOCIATION:(LSC1 OR LSC2)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="SUCCOA" metaid="_868342"/>
+          <speciesReference species="ADP" metaid="_868354"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SUC" metaid="_868366"/>
+          <speciesReference species="ATP" metaid="_868378"/>
+        </listOfProducts>
+        <kineticLaw metaid="_868390">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_868402" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_868414" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_868427" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_868439" value="6.256"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r39" name="succinate dehydrogenase" metaid="_868451" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:(YKL148C OR YLL041C OR YKL141W)</p>
+                    <p>PROTEIN_ASSOCIATION:(SDH1 OR SDH2 OR SDH3)</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="SUC" metaid="_868463"/>
+          <speciesReference species="FAD" metaid="_868475"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="FUM" metaid="_868487"/>
+          <speciesReference species="FADH2" metaid="_868499"/>
+        </listOfProducts>
+        <kineticLaw metaid="_868511">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_868523" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_868535" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_868547" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_868559" value="9.189"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r40" name="fumarate reductase" metaid="_868571" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YJR051W</p>
+                    <p>PROTEIN_ASSOCIATION:OSM1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="FUM" metaid="_868583"/>
+          <speciesReference species="FADH2" metaid="_868595"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SUC" metaid="_868607"/>
+          <speciesReference species="FAD" metaid="_868619"/>
+        </listOfProducts>
+        <kineticLaw metaid="_868631">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_868643" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_868655" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_868667" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_868679" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r41" name="fumarate hydratase" metaid="_868691">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YPL262W</p>
+                    <p>PROTEIN_ASSOCIATION:FUM1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="FUM" metaid="_868703"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MAL" metaid="_868715"/>
+        </listOfProducts>
+        <kineticLaw metaid="_868727">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_868739" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_868751" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_868763" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_868775" value="9.189"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r42" name="malate dehydrogenase (mitochondrial)" metaid="_868787">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YKL085W</p>
+                    <p>PROTEIN_ASSOCIATION:MDH1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="MAL" metaid="_868799"/>
+          <speciesReference species="NADmit" metaid="_868812"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="OAC" metaid="_868824"/>
+          <speciesReference species="NADHmit" metaid="_868836"/>
+        </listOfProducts>
+        <kineticLaw metaid="_868848">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_868860" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_868872" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_868884" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_868896" value="11.32"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r43" name="malic enzyme" metaid="_868908" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YKL029C</p>
+                    <p>PROTEIN_ASSOCIATION:MAE1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="MAL" metaid="_868920"/>
+          <speciesReference species="NADPmit" metaid="_868932"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PYR" metaid="_868944"/>
+          <speciesReference species="CO2_b" metaid="_868956"/>
+          <speciesReference species="NADPHmit" metaid="_868968"/>
+        </listOfProducts>
+        <kineticLaw metaid="_868980">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_868992" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_869004" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_869016" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_869028" value="0.8"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r44" name="carnitine O-acetyltransferase" metaid="_869040" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YML042W</p>
+                    <p>PROTEIN_ASSOCIATION:CAT2</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="ACCOAcyt" metaid="_869052"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ACCOAmit" metaid="_869064"/>
+        </listOfProducts>
+        <kineticLaw metaid="_869076">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_869088" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_869100" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_869112" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_869125" value="0.1333"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r45" name="reoxidation of cytosolic NADH to mitochondrial NADH" metaid="_869137" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:</p>
+                    <p>PROTEIN_ASSOCIATION:</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="NADHcyt" metaid="_869149"/>
+          <speciesReference species="NADmit" metaid="_869162"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NADcyt" metaid="_869174"/>
+          <speciesReference species="NADHmit" metaid="_869186"/>
+        </listOfProducts>
+        <kineticLaw metaid="_869198">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_869211" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_869224" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_869237" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_869250" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r46" name="citrate synthase (mitochondrial)" metaid="_869263" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YCR005C</p>
+                    <p>PROTEIN_ASSOCIATION:CIT2</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="OAC" metaid="_869276"/>
+          <speciesReference species="ACCOAcyt" metaid="_869289"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CIT" metaid="_869302"/>
+        </listOfProducts>
+        <kineticLaw metaid="_869314">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_869326" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_869338" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_869350" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_869362" value="9.678"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r47" name="isocitrate lyase" metaid="_869374" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YER065C</p>
+                    <p>PROTEIN_ASSOCIATION:ICL1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="ISOCIT" metaid="_869386"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GLYO" metaid="_869398"/>
+          <speciesReference species="SUC" metaid="_869410"/>
+        </listOfProducts>
+        <kineticLaw metaid="_869422">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_869434" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_869446" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_869458" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_869470" value="2.933"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r48" name="malate synthase" metaid="_869483" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YNL117W</p>
+                    <p>PROTEIN_ASSOCIATION:MLS1</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="GLYO" metaid="_869495"/>
+          <speciesReference species="ACCOAcyt" metaid="_869507"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MAL" metaid="_869519"/>
+        </listOfProducts>
+        <kineticLaw metaid="_869531">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_869543" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_869555" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_869567" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_869579" value="2.933"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r49" name="malate dehydrogenase (cytoplasmic)" metaid="_869592">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:YOL126C</p>
+                    <p>PROTEIN_ASSOCIATION:MDH2</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="MAL" metaid="_869603"/>
+          <speciesReference species="NADmit" metaid="_869615"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="OAC" metaid="_869627"/>
+          <speciesReference species="NADcyt" metaid="_869640"/>
+        </listOfProducts>
+        <kineticLaw metaid="_869652">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_869664" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_869676" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_869688" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_869700" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r50" name="electronic chain: reoxidation of NADH" metaid="_869712" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:</p>
+                    <p>PROTEIN_ASSOCIATION:</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="ADP" metaid="_869724" stoichiometry="24"/>
+          <speciesReference species="NADHmit" metaid="_869736" stoichiometry="20"/>
+          <speciesReference species="O2_b" metaid="_869749" stoichiometry="10"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ATP" metaid="_869761" stoichiometry="24"/>
+          <speciesReference species="NADmit" metaid="_869773" stoichiometry="20"/>
+        </listOfProducts>
+        <kineticLaw metaid="_869785">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_869797" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_869810" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_869822" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_869834" value="1.021"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r51" name="electronic chain: reoxidation of FADH" metaid="_869846" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:</p>
+                    <p>PROTEIN_ASSOCIATION:</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="ADP" metaid="_869858" stoichiometry="24"/>
+          <speciesReference species="FADH2" metaid="_869870" stoichiometry="20"/>
+          <speciesReference species="O2_b" metaid="_869882" stoichiometry="10"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ATP" metaid="_869894" stoichiometry="24"/>
+          <speciesReference species="FAD" metaid="_869906" stoichiometry="20"/>
+        </listOfProducts>
+        <kineticLaw metaid="_869918">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_869930" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_869942" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_869954" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_869966" value="0.4595"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r52" name="ATP maintenance flux" metaid="_869978" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:</p>
+                    <p>PROTEIN_ASSOCIATION:</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="ATP" metaid="_869990"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ADP" metaid="_870002"/>
+        </listOfProducts>
+        <kineticLaw metaid="_870014">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_870026" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_870038" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_870050" value="0" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_870062" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r53" name="biomass formation" metaid="_870074" reversible="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GENE_ASSOCIATION:</p>
+                    <p>PROTEIN_ASSOCIATION:</p>
+                    </body>
+          
+        </notes>
+        <listOfReactants>
+          <speciesReference species="ACCOAmit" metaid="_870086" stoichiometry="3"/>
+          <speciesReference species="ACCOAcyt" metaid="_870099" stoichiometry="24"/>
+          <speciesReference species="AKG" metaid="_870111" stoichiometry="11"/>
+          <speciesReference species="E4P" metaid="_870123" stoichiometry="3"/>
+          <speciesReference species="P3G" metaid="_870135" stoichiometry="6"/>
+          <speciesReference species="GOH3P" metaid="_870147"/>
+          <speciesReference species="PEP" metaid="_870159" stoichiometry="6"/>
+          <speciesReference species="PYR" metaid="_870171" stoichiometry="18"/>
+          <speciesReference species="RIB5P" metaid="_870183" stoichiometry="3"/>
+          <speciesReference species="GLUC6P" metaid="_870195" stoichiometry="25"/>
+          <speciesReference species="OAC" metaid="_870207" stoichiometry="10"/>
+          <speciesReference species="NADcyt" metaid="_870219" stoichiometry="16"/>
+          <speciesReference species="NADmit" metaid="_870231" stoichiometry="6"/>
+          <speciesReference species="NADPHcyt" metaid="_870243" stoichiometry="90"/>
+          <speciesReference species="NADPHmit" metaid="_870255" stoichiometry="22"/>
+          <speciesReference species="ATP" metaid="_870268" stoichiometry="254"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="BIOM_b" metaid="_870280" stoichiometry="10000"/>
+          <speciesReference species="NADHcyt" metaid="_870292" stoichiometry="16"/>
+          <speciesReference species="NADHmit" metaid="_870304" stoichiometry="6"/>
+          <speciesReference species="NADPmit" metaid="_870316" stoichiometry="22"/>
+          <speciesReference species="ADP" metaid="_870328" stoichiometry="254"/>
+          <speciesReference species="NADPcyt" metaid="_870340" stoichiometry="90"/>
+        </listOfProducts>
+        <kineticLaw metaid="_870352">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <ci> FLUX </ci>
+          </math>
+                  <listOfParameters>
+            <parameter id="LOWER_BOUND" metaid="_870364" value="0" units="dimensionless"/>
+            <parameter id="UPPER_BOUND" metaid="_870376" units="dimensionless"/>
+            <parameter id="OBJECTIVE_COEFFICIENT" metaid="_870388" value="1" units="dimensionless"/>
+            <parameter id="FLUX" metaid="_870400" value="0.04444"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
